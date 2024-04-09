@@ -1,13 +1,13 @@
 #include <Servo.h>
 
 Servo BLDC1;
+
 byte pin_BLDC1 = 5;
+byte startswitch = LOW;
 
 int speed = 1500;
 int runtime = 250;
 int pin_startswitch = 3;
-byte startswitch = LOW;
-
 
 void setup() {
   BLDC1.attach(pin_BLDC1, 1000, 2000);
