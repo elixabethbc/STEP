@@ -19,11 +19,15 @@ void setup() {
 
 void loop() {
 
-  startswitch=HIGH;
+  startswitch = HIGH;
 
   while (startswitch == HIGH) {
     startswitch=digitalRead(pin_startswitch);
     Serial.println("startswitch = HIGH");
+  }
+
+  while (startswitch == LOW) {
+    Serial.println("startswitch = LOW");
   }
 
   int throttle = speed;
